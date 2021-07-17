@@ -1,0 +1,15 @@
+{% extends "pages/base.html" %}
+{% block title %}Blog{% endblock title %}
+{% block content %}
+    <style>
+        .deginer{
+            text-align: center;
+        }
+    </style>
+    <div class="deginer">
+        {% for post in Posts %}
+        <h4>{{post.date|date:"d-m-Y"}} <a href="/blog/{{post.id}}">{{post.title}}</a></h4>
+        <img src="{{post.image.url}}" alt="pt" width = "500px" height = "300px">
+        {% endfor %}
+    </div>
+{% endblock content %}

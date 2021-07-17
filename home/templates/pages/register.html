@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        p{
+            display: block;
+            font-size: 20px;
+        }
+        label{
+            position: absolute;
+        }
+        input{
+            margin-top: 25px;
+            
+        }
+
+    </style>
+    <center>
+        <form action="." method="POST">
+            {% csrf_token  %}
+            {{form.as_p}}
+            <input type="submit" value="Đăng kí">
+        </form>
+    </center>
+</body>
+</html>
